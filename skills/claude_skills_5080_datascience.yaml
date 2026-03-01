@@ -1,0 +1,338 @@
+# ============================================================
+# Claude Code Skills - 5080問題 × データサイエンス × DX推進
+# note記事プロジェクト詳細設定
+# ============================================================
+
+project:
+  title: "5080問題をデータサイエンスで突破するDX推進プロジェクト"
+  target_platform: note
+  article_file: "note_5080_datascience_dx.md"
+  last_updated: "2026-02-28"
+  author_persona: "社会課題×テクノロジーライター"
+
+
+# ============================================================
+# 社会課題の定義
+# ============================================================
+
+social_issues:
+  issue_5080:
+    definition: "80代の親が50代の引きこもりの子を扶養し続ける家庭問題"
+    scale:
+      target_age: "40〜64歳"
+      estimated_population: 613000  # 単位：人（内閣府2019年）
+      long_term_rate: 0.467          # 7年以上の割合
+      average_age: 52.3
+    root_causes:
+      - label: "就労機会の喪失"
+        detail: "空白期間・年齢による正規雇用への参入困難"
+      - label: "社会的孤立"
+        detail: "人間関係・コミュニティからの長期離脱"
+      - label: "経済的困窮"
+        detail: "親の年金・貯蓄に依存する構造的貧困"
+      - label: "メンタルヘルス"
+        detail: "うつ・社会不安障害との併存が多い"
+    related_concepts:
+      - "8050問題（親80代・子50代）"
+      - "アンダークラス（橋本健二定義）"
+      - "社会的孤立"
+      - "相対的貧困"
+
+  dx_talent_shortage:
+    definition: "日本のデジタルトランスフォーメーション推進に必要な人材の慢性的不足"
+    scale:
+      shortage_by_2030: 790000  # 単位：人（経産省試算）
+      current_shortage: 330000  # 単位：人
+    critical_areas:
+      - "中小企業のDX支援"
+      - "地方自治体のデジタル行政化"
+      - "医療・介護分野のデータ活用"
+      - "農業・製造業の IoT化"
+
+
+# ============================================================
+# データサイエンティスト スキルロードマップ
+# ============================================================
+
+skill_roadmap:
+  phase_1:
+    name: "基礎固め"
+    duration_months: 6
+    goal: "動くコードが書ける・データを読める状態"
+    skills:
+      programming:
+        language: Python
+        version: "3.11+"
+        items:
+          - name: "基本文法"
+            topics: ["変数", "型", "条件分岐", "ループ", "関数", "クラス"]
+            priority: critical
+          - name: "データ操作"
+            libraries: ["pandas", "numpy"]
+            priority: critical
+          - name: "可視化"
+            libraries: ["matplotlib", "seaborn"]
+            priority: high
+      statistics:
+        items:
+          - "記述統計（平均・中央値・分散・標準偏差）"
+          - "確率の基礎"
+          - "相関と因果の違い"
+          - "仮説検定の考え方（t検定・カイ二乗検定）"
+        priority: high
+    learning_resources:
+      - name: "Python.org 公式チュートリアル"
+        url: "https://docs.python.org/ja/3/tutorial/"
+        cost: free
+      - name: "Kaggle Learn"
+        url: "https://www.kaggle.com/learn"
+        cost: free
+      - name: "統計学入門（東大教材）"
+        url: "https://www.amazon.co.jp/dp/4130420658"
+        cost: paid
+    milestones:
+      - "pandasでCSVファイルを読み込み・集計・グラフ化できる"
+      - "Jupyterノートブックで分析フローを記述できる"
+      - "公開データセットで簡単なEDA（探索的データ分析）ができる"
+
+  phase_2:
+    name: "実践的スキル習得"
+    duration_months: 6
+    goal: "データから価値を見つけて伝えられる状態"
+    skills:
+      machine_learning:
+        framework: scikit-learn
+        algorithms:
+          - type: "分類"
+            models: ["ロジスティック回帰", "決定木", "ランダムフォレスト", "SVM"]
+          - type: "回帰"
+            models: ["線形回帰", "Lasso/Ridge", "勾配ブースティング"]
+          - type: "クラスタリング"
+            models: ["K-means", "階層クラスタリング"]
+        priority: critical
+      database:
+        language: SQL
+        level: "中〜上級"
+        topics:
+          - "SELECT・FROM・WHERE・GROUP BY・JOIN"
+          - "ウィンドウ関数"
+          - "サブクエリ・CTE"
+          - "インデックス最適化の考え方"
+        priority: critical
+      visualization_tools:
+        - name: Tableau
+          level: 基礎
+          priority: high
+        - name: "Power BI"
+          level: 基礎
+          priority: medium
+        - name: Streamlit
+          detail: "Pythonで作るインタラクティブダッシュボード"
+          priority: high
+      version_control:
+        tool: Git/GitHub
+        topics:
+          - "基本操作（add/commit/push/pull）"
+          - "ブランチ戦略"
+          - "ポートフォリオ公開"
+        priority: critical
+    outputs:
+      - "Kaggleビギナーコンペへの参加・スコア提出"
+      - "公開データ（e-Stat・気象庁等）を使った分析記事をnoteで公開"
+      - "GitHubポートフォリオに3件以上のプロジェクト掲載"
+    learning_resources:
+      - name: "scikit-learn 公式ドキュメント"
+        url: "https://scikit-learn.org/stable/"
+        cost: free
+      - name: "SQLZoo"
+        url: "https://sqlzoo.net"
+        cost: free
+      - name: "Kaggle Competitions"
+        url: "https://www.kaggle.com/competitions"
+        cost: free
+
+  phase_3:
+    name: "専門化・実戦投入"
+    duration_months: 6
+    goal: "収益化・社会貢献できる状態"
+    skills:
+      deep_learning:
+        frameworks: ["TensorFlow", "PyTorch"]
+        topics:
+          - "ニューラルネットワークの基礎"
+          - "CNN（画像認識）"
+          - "RNN/Transformer（自然言語処理）"
+        priority: medium
+      cloud:
+        providers:
+          - name: AWS
+            services: ["S3", "EC2", "SageMaker", "Lambda"]
+          - name: GCP
+            services: ["BigQuery", "Vertex AI", "Colab"]
+          - name: Azure
+            services: ["Azure ML", "Azure Databricks"]
+        priority: high
+      mlops:
+        topics:
+          - "モデルのデプロイ（FastAPI + Docker）"
+          - "実験管理（MLflow）"
+          - "CI/CDパイプライン（GitHub Actions）"
+        priority: medium
+    monetization_paths:
+      freelance:
+        - platform: "Lancers"
+          url: "https://www.lancers.jp"
+          target_skills: ["データ分析", "Python", "BI構築"]
+        - platform: "Crowdworks"
+          url: "https://crowdworks.jp"
+          target_skills: ["機械学習", "データ整備", "可視化"]
+        - platform: "Upwork（海外）"
+          url: "https://www.upwork.com"
+          target_skills: ["Data Science", "ML Engineering"]
+      competitions:
+        - platform: Kaggle
+          approach: "Bronze/Silver メダル獲得でポートフォリオ強化"
+        - platform: "SIGNATE（国内）"
+          url: "https://signate.jp"
+          approach: "国内企業主催コンペで実績作り"
+      content_creation:
+        - platform: note
+          type: "学習記録・技術解説"
+        - platform: Zenn
+          type: "技術記事"
+        - platform: YouTube
+          type: "ハンズオン動画"
+      dx_support:
+        target: "中小企業・地方自治体"
+        services:
+          - "Excel→BI化支援"
+          - "データ整備・クレンジング"
+          - "KPIダッシュボード構築"
+          - "業務自動化（RPA連携）"
+
+
+# ============================================================
+# 引きこもり経験者の強み・弱みマッピング
+# ============================================================
+
+persona_analysis:
+  strengths:
+    - trait: "深い集中力"
+      ds_application: "長時間のデータクリーニング・モデルチューニング"
+    - trait: "独学力・自己学習習慣"
+      ds_application: "継続的なスキルアップ・新技術キャッチアップ"
+    - trait: "デジタル親和性"
+      ds_application: "ツール習得の速さ・オンライン作業への適応"
+    - trait: "パターン認識・分析思考"
+      ds_application: "データの異常検知・仮説立案"
+    - trait: "細部へのこだわり"
+      ds_application: "データ品質管理・バグの発見"
+  challenges:
+    - challenge: "対面コミュニケーションへの困難"
+      mitigation: "リモートワーク・非同期コミュニケーション中心の職種選択"
+    - challenge: "長期の空白期間"
+      mitigation: "成果物（ポートフォリオ）による実力証明・経歴より実績評価の文化"
+    - challenge: "就労リズムの構築"
+      mitigation: "フリーランス・短時間案件から段階的に増加"
+    - challenge: "自己効力感の低さ"
+      mitigation: "小さな成功体験の積み重ね（Kaggleメダル・案件受注）"
+
+
+# ============================================================
+# 支援体制の設計
+# ============================================================
+
+support_framework:
+  learning_support:
+    - type: "伴走型メンタリング"
+      frequency: "週1回・オンライン"
+      focus: ["学習進捗確認", "躓きの解消", "メンタルケア"]
+    - type: "ピアコミュニティ"
+      format: "Discord/Slackによる当事者同士のオンライングループ"
+      benefit: "孤独感の解消・情報共有・モチベーション維持"
+    - type: "公開学習（ビルドインパブリック）"
+      format: "note・Twitterで学習記録を公開"
+      benefit: "アウトプットの習慣化・フォロワーによる応援"
+
+  economic_support:
+    - "生活保護受給中でもスキル学習可能（就労準備支援事業との連携）"
+    - "給付型奨学金・自治体のデジタルスキル研修補助金の活用"
+    - "まず月1〜3万円の小さな収入から始める段階設計"
+
+  employment_pathway:
+    stages:
+      - step: 1
+        status: "学習期"
+        period: "0〜6ヶ月"
+        income_target: 0
+        focus: "スキル習得・ポートフォリオ構築"
+      - step: 2
+        status: "副業・小規模受注期"
+        period: "6〜12ヶ月"
+        income_target_monthly: 30000  # 円
+        focus: "クラウドソーシング案件・コンペ参加"
+      - step: 3
+        status: "フリーランス本格化"
+        period: "12〜18ヶ月"
+        income_target_monthly: 150000  # 円
+        focus: "継続顧客・地域DX支援"
+      - step: 4
+        status: "選択"
+        period: "18ヶ月以降"
+        options:
+          - "フリーランス継続（自由度重視）"
+          - "リモート正社員・契約社員"
+          - "支援コミュニティの運営・メンター"
+
+
+# ============================================================
+# 関連政策・制度
+# ============================================================
+
+policy_context:
+  government_initiatives:
+    - name: "デジタル田園都市国家構想"
+      relevance: "地方DX人材需要の増加"
+    - name: "リスキリング支援（経産省）"
+      relevance: "IT・データスキル習得への補助金"
+    - name: "ひきこもり地域支援センター（厚労省）"
+      relevance: "全都道府県設置・相談窓口"
+    - name: "就労準備支援事業（生活困窮者自立支援法）"
+      relevance: "段階的就労移行プログラム"
+  data_sources:
+    - "内閣府「生活状況に関する調査」2019年"
+    - "経済産業省「DXレポート2.0」2020年"
+    - "厚生労働省「ひきこもり支援施策」"
+
+
+# ============================================================
+# 記事構成・Claude Code Skills設定
+# ============================================================
+
+claude_code_skills:
+  article_style:
+    tone: "社会派・希望を見せる・具体的"
+    target_reader:
+      - "5080問題の当事者・家族"
+      - "引きこもり支援者・NPO関係者"
+      - "DX推進担当者・採用担当者"
+      - "社会課題に関心のある一般読者"
+    word_count_target: 4000
+    structure:
+      - "課題の提示（共感）"
+      - "二つの問題の接続（視点転換）"
+      - "具体的解決策（ロードマップ）"
+      - "社会構造への提言（システム思考）"
+      - "希望のある結論"
+
+  writing_rules:
+    - "統計数字は必ず出典を明記する"
+    - "当事者を「支援対象」ではなく「主体者」として描く"
+    - "専門用語には必ず説明を付ける"
+    - "具体的な数字・期間・金額で説得力を高める"
+    - "否定的な表現より肯定的・可能性を示す表現を優先"
+
+  seo_tags:
+    primary: ["5080問題", "引きこもり", "データサイエンス"]
+    secondary: ["DX推進", "社会復帰", "リスキリング", "アンダークラス", "8050問題"]
+    long_tail: ["引きこもり データサイエンス 社会復帰", "5080問題 解決策 DX"]
